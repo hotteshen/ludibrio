@@ -2,9 +2,9 @@
 
 from inspect import getframeinfo
 from sys import _getframe as getframe
-from _testdouble import _TestDouble
-from dependencyinjection import DependencyInjection
-from ludibrio.helpers import format_called
+from ._testdouble import _TestDouble
+from .dependencyinjection import DependencyInjection
+from .helpers import format_called
 
 STOPRECORD = False
 RECORDING = True
