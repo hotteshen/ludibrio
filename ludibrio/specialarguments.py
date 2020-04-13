@@ -15,7 +15,7 @@ class matcher(object):
     def __eq__(self, other):
         return self.matcher(other, self.expected)
 
-from matcher import *
+from .matcher import *
 
 
 

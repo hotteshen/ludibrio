@@ -1,7 +1,7 @@
 #-*- coding:utf-8 -*-
 
 from sys import _getframe as getframe
-from _testdouble import _TestDouble
+from ._testdouble import _TestDouble
 
 class Dummy(_TestDouble):
     """Dummy:

@@ -2,9 +2,9 @@
 
 from inspect import getframeinfo 
 from sys import _getframe as getframe 
-from _testdouble import _TestDouble 
-from dependencyinjection import DependencyInjection
-from ludibrio.helpers import format_called
+from ._testdouble import _TestDouble 
+from .dependencyinjection import DependencyInjection
+from .helpers import format_called
 
 STOPRECORD = False
 RECORDING = True
@@ -96,7 +96,7 @@ class Mock(_TestDouble):
     def __del__(self):
         self.__dependency_injection__.restore_object()
         if self.__expectation__:
-            print  self._call_waiting_msg()
+            print(self._call_waiting_msg())
     
     def _call_waiting_msg(self):
         call_wait = self.__expectation__.pop(0)
